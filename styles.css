@@ -1,0 +1,107 @@
+body {
+    height:100vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+}
+
+.canvas {
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    position: absolute;
+    background:white;
+    overflow:hidden;
+    mix-blend-mode: screen;
+}
+
+.blur {
+    filter:blur(40px);
+    height: 100%;
+}
+
+.circle-followed {
+    cursor: none;
+}
+
+.filter {
+    pointer-events: none;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.filter-dodge {
+    background: #808080;
+    mix-blend-mode: color-dodge;
+}
+
+.filter-burn {
+    background: black;
+    mix-blend-mode: color-burn;
+}
+
+.circle {
+    position: absolute;
+    display:block;
+    width:200px;
+    aspect-ratio: 1 / 1;
+    background: black;
+    border-radius:100%;
+    margin-bottom: 10px;
+}
+
+.circle-center {
+    top:50%;
+    left:50%;
+    width:243px;
+    transform: translateX(-50%)  translateY(-50%);
+}
+
+.circle-center2 {
+    top: 42%;
+    left: 39%;
+    width: 164px;
+    transform: translateX(-50%)  translateY(-50%);
+}
+
+.circle-center3 {
+    top: 66%;
+    left: 42%;
+    width: 171px;
+    transform: translateX(-50%)  translateY(-50%);
+}
+
+body:not(:hover) .circle-followed {
+    animation: move 5s cubic-bezier(0, 0.37, 1, 0.66) infinite;
+    animation-direction: alternate-reverse;
+}
+
+body:not(:hover) .circle-followed2 {
+    animation: move2 5s cubic-bezier(0, 0.37, 1, 0.66) infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes move {
+    0% {
+        top:-10%;
+        left:-10%;
+    }
+
+    100% {
+        top:80%;
+        left:80%;
+    }
+}
+
+@keyframes move2 {
+    0% {
+        top:-10%;
+        left:-10%;
+    }
+
+    100% {
+        top:80%;
+        left:80%;
+    }
+}
